@@ -29,7 +29,7 @@
           <% # TODO Haveしたユーザー一覧 %>
           <div class="icon">
             <% @have_users.each do |have_user| %>
-              <%= gravatar_for have_user, size: 30 %>
+              <%= link_to gravatar_for(have_user, size: 30), have_user %>
             <% end %>
           </div>
         </div>
