@@ -1,0 +1,28 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h2>HAVE RANKING</h2>
+    </div>
+</div>
+
+<div class="container">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th width = "50">NO</th>
+                <th width = "50">写真</th>
+                <th >タイトル</th>
+                <th width = "50">HAVE数</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @items.each_with_index do |item, index| %>
+                <tr>
+                    <th><%= index + 1 %></th>
+                    <td><%= image_tag(item.small_image, alt: "no-image.png") %></td>
+                    <td><%= item.title %></td>
+                    <td><%= item.have_users.count %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>            
